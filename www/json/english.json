@@ -1,0 +1,114 @@
+[
+    {
+        "ID": 2,
+        "name": "Political",
+        "slug": "political-news",
+        "description": "",
+        "taxonomy": "category",
+        "parent": null,
+        "count": 643,
+        "link": "http://tsnewstoday.com/category/political-news",
+        "meta": {
+            "links": {
+                "collection": "http://tsnewstoday.com/wp-json/taxonomies/category/terms",
+                "self": "http://tsnewstoday.com/wp-json/taxonomies/category/terms/2"
+            }
+        }
+    },
+    {
+        "ID": 3,
+        "name": "Movies",
+        "slug": "movie-news",
+        "description": "",
+        "taxonomy": "category",
+        "parent": null,
+        "count": 187,
+        "link": "http://tsnewstoday.com/category/movie-news",
+        "meta": {
+            "links": {
+                "collection": "http://tsnewstoday.com/wp-json/taxonomies/category/terms",
+                "self": "http://tsnewstoday.com/wp-json/taxonomies/category/terms/3"
+            }
+        }
+    },
+    {
+        "ID": 325,
+        "name": "Movie Reviews",
+        "slug": "movie-reviews",
+        "description": "",
+        "taxonomy": "category",
+        "parent": null,
+        "count": 13,
+        "link": "http://tsnewstoday.com/category/movie-reviews",
+        "meta": {
+            "links": {
+                "collection": "http://tsnewstoday.com/wp-json/taxonomies/category/terms",
+                "self": "http://tsnewstoday.com/wp-json/taxonomies/category/terms/325"
+            }
+        }
+    },
+    {
+        "ID": 4,
+        "name": "Business",
+        "slug": "business",
+        "description": "",
+        "taxonomy": "category",
+        "parent": null,
+        "count": 68,
+        "link": "http://tsnewstoday.com/category/business",
+        "meta": {
+            "links": {
+                "collection": "http://tsnewstoday.com/wp-json/taxonomies/category/terms",
+                "self": "http://tsnewstoday.com/wp-json/taxonomies/category/terms/4"
+            }
+        }
+    },
+    {
+        "ID": 5,
+        "name": "Sports News",
+        "slug": "sports-news",
+        "description": "",
+        "taxonomy": "category",
+        "parent": null,
+        "count": 55,
+        "link": "http://tsnewstoday.com/category/sports-news",
+        "meta": {
+            "links": {
+                "collection": "http://tsnewstoday.com/wp-json/taxonomies/category/terms",
+                "self": "http://tsnewstoday.com/wp-json/taxonomies/category/terms/5"
+            }
+        }
+    },
+    {
+        "ID": 7,
+        "name": "NRI News",
+        "slug": "nri-news",
+        "description": "",
+        "taxonomy": "category",
+        "parent": null,
+        "count": 58,
+        "link": "http://tsnewstoday.com/category/nri-news",
+        "meta": {
+            "links": {
+                "collection": "http://tsnewstoday.com/wp-json/taxonomies/category/terms",
+                "self": "http://tsnewstoday.com/wp-json/taxonomies/category/terms/7"
+            }
+        }
+    },
+    {
+        "ID": 10,
+        "name": "Editors Time",
+        "slug": "editors-time",
+        "description": "",
+        "taxonomy": "category",
+        "parent": null,
+        "count": 13,
+        "link": "http://tsnewstoday.com/category/editors-time",
+        "meta": {
+            "links": {
+                "collection": "http://tsnewstoday.com/wp-json/taxonomies/category/terms",
+                "self": "http://tsnewstoday.com/wp-json/taxonomies/category/terms/10"
+            }
+        }
+    }
+]

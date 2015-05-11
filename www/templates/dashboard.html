@@ -21,7 +21,7 @@
             <a href="#/app/category/{{d.name}}/{{d.slug}}" class="item item-icon-left" ng-repeat="d in categories">
                 <label ng-bind-html="d.name"></label>
             </a>
-            <a href="#/telugu/dashboard" class="item item-icon-left">
+            <a href="#/telugu/dashboard" class="item item-icon-left" ng-show="categories.length!=0">
                 తెలుగు వెర్షన్
             </a>
         </div>

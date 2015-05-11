@@ -1,0 +1,98 @@
+[
+    {
+        "ID": 56,
+        "name": "ప్రాంతీయ వార్తలు",
+        "slug": "state-news",
+        "description": "",
+        "taxonomy": "category",
+        "parent": null,
+        "count": 822,
+        "link": "http://telugu.tsnewstoday.com/category/state-news",
+        "meta": {
+            "links": {
+                "collection": "http://telugu.tsnewstoday.com/wp-json/taxonomies/category/terms",
+                "self": "http://telugu.tsnewstoday.com/wp-json/taxonomies/category/terms/56"
+            }
+        }
+    },
+    {
+        "ID": 2,
+        "name": "సినిమా వార్తలు",
+        "slug": "movie-news",
+        "description": "",
+        "taxonomy": "category",
+        "parent": null,
+        "count": 898,
+        "link": "http://telugu.tsnewstoday.com/category/movie-news",
+        "meta": {
+            "links": {
+                "collection": "http://telugu.tsnewstoday.com/wp-json/taxonomies/category/terms",
+                "self": "http://telugu.tsnewstoday.com/wp-json/taxonomies/category/terms/2"
+            }
+        }
+    },
+    {
+        "ID": 14,
+        "name": "వాణిజ్యం",
+        "slug": "business-news",
+        "description": "",
+        "taxonomy": "category",
+        "parent": null,
+        "count": 104,
+        "link": "http://telugu.tsnewstoday.com/category/business-news",
+        "meta": {
+            "links": {
+                "collection": "http://telugu.tsnewstoday.com/wp-json/taxonomies/category/terms",
+                "self": "http://telugu.tsnewstoday.com/wp-json/taxonomies/category/terms/14"
+            }
+        }
+    },
+    {
+        "ID": 15,
+        "name": "క్రీడా వార్తలు",
+        "slug": "sports-news",
+        "description": "",
+        "taxonomy": "category",
+        "parent": null,
+        "count": 114,
+        "link": "http://telugu.tsnewstoday.com/category/sports-news",
+        "meta": {
+            "links": {
+                "collection": "http://telugu.tsnewstoday.com/wp-json/taxonomies/category/terms",
+                "self": "http://telugu.tsnewstoday.com/wp-json/taxonomies/category/terms/15"
+            }
+        }
+    },
+    {
+        "ID": 81,
+        "name": "ఇతర వార్తలు",
+        "slug": "other-news",
+        "description": "",
+        "taxonomy": "category",
+        "parent": null,
+        "count": 700,
+        "link": "http://telugu.tsnewstoday.com/category/other-news",
+        "meta": {
+            "links": {
+                "collection": "http://telugu.tsnewstoday.com/wp-json/taxonomies/category/terms",
+                "self": "http://telugu.tsnewstoday.com/wp-json/taxonomies/category/terms/81"
+            }
+        }
+    },
+    {
+        "ID": 102,
+        "name": "NRI వార్తలు",
+        "slug": "nri-news",
+        "description": "",
+        "taxonomy": "category",
+        "parent": null,
+        "count": 69,
+        "link": "http://telugu.tsnewstoday.com/category/nri-news",
+        "meta": {
+            "links": {
+                "collection": "http://telugu.tsnewstoday.com/wp-json/taxonomies/category/terms",
+                "self": "http://telugu.tsnewstoday.com/wp-json/taxonomies/category/terms/102"
+            }
+        }
+    }
+]

@@ -14,7 +14,8 @@ angular.module('starter.factories', ['ngResource'])
                 method : 'GET',
                 isArray : true,
                 cache : false,
-                url : API.API + 'taxonomies/category/terms'
+                url: 'json/english.json'
+//                url : API.API + 'taxonomies/category/terms'
             },
             GetPosts : {
                 method : 'GET',
@@ -41,7 +42,8 @@ angular.module('starter.factories', ['ngResource'])
                 method : 'GET',
                 isArray : true,
                 cache : false,
-                url : API.teluguAPI + 'taxonomies/category/terms'
+                url: 'json/telugu.json'
+//                url : API.teluguAPI + 'taxonomies/category/terms'
             },
             GetPosts : {
                 method : 'GET',
