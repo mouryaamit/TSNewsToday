@@ -1,0 +1,35 @@
+<ion-view title="TS News Today">
+    <ion-content>
+        <ion-refresher
+                pulling-text="Pull to refresh..."
+                on-refresh="doRefresh()">
+        </ion-refresher>
+        <div class="scrolling">
+            <div class="scrolleft">బ్రేకింగ్ న్యూస్</div>
+            <div class="scrollright">
+                <marquee class="scrollitem" onmouseover="this.setAttribute('scrollamount', 0, 0);"
+                         onmouseout="this.setAttribute('scrollamount', 3, 0);" scrollamount="3" scrolldelay="50"
+                         direction="left" behavior="scroll">
+
+                    <a href="#/telugu/story/{{d.ID}}" rel="bookmark"
+                       title="Permanent Link to Samantha stills" ng-repeat="d in posts">
+                        <label ng-bind-html="d.title"></label></a>
+
+                </marquee>
+
+            </div>
+
+        </div>
+
+        <div class="list card">
+
+            <a href="#/telugu/category/{{d.name}}/{{d.slug}}" class="item item-icon-left" ng-repeat="d in categories">
+                <!--<i class="icon ion-wifi"></i>-->
+                <label ng-bind-html="d.name"></label>
+            </a>
+            <a href="#/app/dashboard" class="item item-icon-left">
+                English Version
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

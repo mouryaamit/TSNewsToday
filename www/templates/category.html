@@ -1,0 +1,22 @@
+<ion-view title="TS News Today : {{title}}">
+    <ion-content>
+        <ion-refresher
+                pulling-text="Pull to refresh..."
+                on-refresh="doRefresh()">
+        </ion-refresher>
+        <div class="list card" ng-if="posts.length != 0">
+            <a href="#/app/story/{{d.ID}}" class="item item-icon-left" ng-repeat="d in posts">
+                <!--<i class="icon ion-wifi"></i>-->
+                <label ng-bind-html="d.title"></label>
+            </a>
+
+        </div>
+        <button class="button button-block button-assertive" disabled ng-if="posts.length == 0 && loaded">
+            No Story
+        </button>
+        <button class="button button-block button-positive" ng-click="loadMore()"
+                ng-if="(posts.length % 5 ) == 0 && posts.length != 0 && loadMoreStatus">
+            Load More Stories(+)
+        </button>
+    </ion-content>
+</ion-view>
