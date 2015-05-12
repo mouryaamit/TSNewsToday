@@ -6,7 +6,7 @@ angular.module('starter.controllers', [])
         }
     })
 
-    .controller('DashboardCtrl', function ($scope, $stateParams, newsFactory, loadingService, $rootScope, $ionicSlideBoxDelegate) {
+    .controller('DashboardCtrl', function ($scope, $stateParams, newsFactory, loadingService, $rootScope, $ionicSlideBoxDelegate,$interval) {
         $scope.nextSlide = function() {
             $ionicSlideBoxDelegate.next();
         }
@@ -48,6 +48,13 @@ angular.module('starter.controllers', [])
                     $scope.$broadcast('scroll.refreshComplete');
                     $ionicSlideBoxDelegate.slide(0);
                     loadingService.hide();
+                    $interval(function(){
+                        if($ionicSlideBoxDelegate.currentIndex() == ($ionicSlideBoxDelegate.slidesCount()-1)){
+                            $ionicSlideBoxDelegate.slide(0)
+                        }else{
+                            $scope.nextSlide();
+                        }
+                    }, 5000);
                 }, function (error) {
                     $scope.$broadcast('scroll.refreshComplete');
                     loadingService.hide();
