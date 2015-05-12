@@ -43,9 +43,9 @@
                 class="chpcs_next" id="wa_chpc_slider_next" style="display: block;"
                 data-ng-click="nextSlide()"><span>›</span></a>
         </div>
-        <div class="list card">
+        <div class="list list-inset">
 
-            <a href="#/app/category/{{d.name}}/{{d.slug}}" class="item item-icon-left" ng-repeat="d in categories">
+            <a href="#/app/category/{{d.name}}/{{d.slug}}" class="item item-icon-left" ng-repeat="d in engCategories">
                 <label ng-bind-html="d.name" style="font-weight: bolder"></label>
             </a>
             <a href="#/telugu/dashboard" class="item item-icon-left" style="color: #33cd5f" ng-show="categories.length!=0">

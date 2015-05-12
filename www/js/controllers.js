@@ -16,13 +16,13 @@ angular.module('starter.controllers', [])
 
         $scope.doRefresh = function () {
             loadingService.show();
-            $rootScope.categories = null || []
+            $rootScope.engCategories = null || []
             $scope.aImages = null || [];
             newsFactory.GetAllCategory().$promise.then(function (data) {
-                $rootScope.categories = null || [];
+                $rootScope.engCategories = null || [];
                 for (var i = 0; i < data.length; i++) {
                     if (data[i].parent == null && data[i].slug != 'uncategorized' && data[i].slug != 'headline' && data[i].slug != 'photo-gallery') {
-                        $rootScope.categories.push(data[i]);
+                        $rootScope.engCategories.push(data[i]);
                     }
                 }
                 newsFactory.GetPosts({
@@ -146,12 +146,12 @@ angular.module('starter.controllers', [])
     .controller('teluguDashboardCtrl', function ($scope, $stateParams, teluguNewsFactory, loadingService, $rootScope) {
         $scope.doRefresh = function () {
             loadingService.show();
-            $rootScope.categories = null || []
+            $rootScope.telCategories = null || []
             teluguNewsFactory.GetAllCategory({'filter[order]': 'DESC'}).$promise.then(function (data) {
-                $rootScope.categories = null || [];
+                $rootScope.telCategories = null || [];
                 for (var i = 0; i < data.length; i++) {
                     if (data[i].parent == null && data[i].slug != 'uncategorized' && data[i].slug != 'headline') {
-                        $rootScope.categories.push(data[i]);
+                        $rootScope.telCategories.push(data[i]);
                     }
                 }
                 teluguNewsFactory.GetPosts({
