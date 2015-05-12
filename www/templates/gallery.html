@@ -1,0 +1,42 @@
+<ion-view title="TS News Today">
+    <ion-content>
+        <ion-refresher
+                pulling-text="Pull to refresh..."
+                on-refresh="doRefresh()">
+        </ion-refresher>
+        <div class="list card">
+
+            <div class="item item-avatar">
+                <h2 align="center" ><label align="center" ng-bind-html="storyTitle" style="text-align: center; font-weight: bolder"></label></h2>
+            </div>
+
+            <div class="item item-body" align="center" style="text-align: center">
+                <!--<div data-ng-repeat="d in MediaList">
+                    <img src="{{d.source}}">
+                </div>-->
+
+
+
+
+                <div class="chpcs_image_carousel"  ng-if="MediaList.length > 0">
+                    <div align="center"
+                         style="text-align: center; margin-top: 40px; border: solid 1px #000000">
+                        <ion-slide-box show-pager="false">
+                            <ion-slide ng-repeat="oImage in MediaList">
+                                <div class="chpcs_foo_content" style="height: 210px; margin-right: 6px;">
+                    <span class="chpcs_img">
+                        <img ng-src="{{oImage.source}}"
+                             style="max-width: 70%; max-height: 200px"/>
+                        </span>
+</div>
+                            </ion-slide>
+                        </ion-slide-box>
+                    </div>
+                    <!--    <div class="chpcs_clearfix"></div>
+                        <a class="chpcs_prev" id="wa_chpc_slider_prev" href="#" style="display: block;"><span>‹</span></a><a
+                            class="chpcs_next" id="wa_chpc_slider_next" href="#" style="display: block;"><span>›</span></a>-->
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

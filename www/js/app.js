@@ -49,7 +49,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.factories', 
             })
 
             .state('app.dashboard', {
-                cache: false,
+                cache: true,
                 url: "/dashboard",
                 views: {
                     'menuContent': {
@@ -81,6 +81,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.factories', 
                 }
             })
 
+            .state('app.gallery', {
+                cache: false,
+                url: "/gallery/:storyId/:storyTitle",
+                views: {
+                    'menuContent': {
+                        templateUrl: "templates/gallery.html",
+                        controller: 'GalleryCtrl'
+                    }
+                }
+            })
+
             .state('telugu', {
                 url: "/telugu",
                 abstract: true,
@@ -89,7 +100,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.factories', 
             })
 
             .state('telugu.dashboard', {
-                cache: false,
+                cache: true,
                 url: "/dashboard",
                 views: {
                     'menuContent': {

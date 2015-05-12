@@ -23,6 +23,12 @@ angular.module('starter.factories', ['ngResource'])
                 cache : false,
                 url : API.API + 'posts'
             },
+            GetMedia : {
+                method : 'GET',
+                isArray : true,
+                cache : false,
+                url : API.API + 'media'
+            },
             GetStory : {
                 method : 'GET',
                 isArray : false,

@@ -7,6 +7,18 @@ angular.module('starter.controllers', [])
     })
 
     .controller('DashboardCtrl', function ($scope, $stateParams, newsFactory, loadingService, $rootScope, $ionicSlideBoxDelegate) {
+        $scope.aImages = null || [];
+        newsFactory.GetPosts({
+            'filter[category_name]': 'photo-gallery'
+        }).$promise.then(function (data) {
+                $scope.aImages = data;
+                $scope.$broadcast('scroll.refreshComplete');
+                $ionicSlideBoxDelegate.slide(0);
+                loadingService.hide();
+            }, function (error) {
+                $scope.$broadcast('scroll.refreshComplete');
+                loadingService.hide();
+            })
         $scope.doRefresh = function () {
             loadingService.show();
             $rootScope.categories = null || []
@@ -80,6 +92,26 @@ angular.module('starter.controllers', [])
             }).$promise.then(function (data) {
                     $scope.story = null || {};
                     $scope.story = data;
+                    $scope.$broadcast('scroll.refreshComplete');
+                    loadingService.hide();
+                }, function (error) {
+                    $scope.$broadcast('scroll.refreshComplete');
+                    loadingService.hide();
+                })
+        }
+        $scope.doRefresh();
+    })
+
+    .controller('GalleryCtrl', function ($scope, $stateParams, newsFactory, loadingService) {
+        $scope.doRefresh = function () {
+            loadingService.show();
+            $scope.MediaList = null || {}
+            $scope.storyTitle = $stateParams.storyTitle;
+            newsFactory.GetMedia({
+                'filter[post_parent]': $stateParams.storyId
+            }).$promise.then(function (data) {
+                    $scope.MediaList = null || {};
+                    $scope.MediaList = data;
                     $scope.$broadcast('scroll.refreshComplete');
                     loadingService.hide();
                 }, function (error) {
