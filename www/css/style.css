@@ -4658,3 +4658,13 @@ body.logged-in .floatingmainmenu_b {
 
 }
 /*==============================================*/
+
+.ngg-navigation {
+    display: none;
+}
+.ngg-slideshow-loader {
+    display: none;
+}
+.slideshowlink {
+    display: none;
+}

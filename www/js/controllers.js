@@ -19,6 +19,13 @@ angular.module('starter.controllers', [])
                 $scope.$broadcast('scroll.refreshComplete');
                 loadingService.hide();
             })
+        $scope.nextSlide = function() {
+            $ionicSlideBoxDelegate.next();
+        }
+        $scope.previousSlide = function() {
+            $ionicSlideBoxDelegate.previous();
+        }
+
         $scope.doRefresh = function () {
             loadingService.show();
             $rootScope.categories = null || []
