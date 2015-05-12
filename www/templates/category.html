@@ -4,10 +4,10 @@
                 pulling-text="Pull to refresh..."
                 on-refresh="doRefresh()">
         </ion-refresher>
-        <div class="list card" ng-if="posts.length != 0">
-            <a href="#/app/story/{{d.ID}}" class="item item-icon-left" ng-repeat="d in posts">
-                <!--<i class="icon ion-wifi"></i>-->
-                <label ng-bind-html="d.title"></label>
+        <div class="list list-inset" ng-if="posts.length != 0">
+            <a href="#/app/story/{{d.ID}}" class="item item-avatar" ng-repeat="d in posts">
+                <img src="{{d.featured_image.attachment_meta.sizes.thumbnail.url}}">
+                <label ng-bind-html="d.title" style="vertical-align: middle; line-height: 38px;"></label>
             </a>
 
         </div>
