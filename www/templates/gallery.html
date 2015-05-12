@@ -1,4 +1,4 @@
-<ion-view title="TSNewsToday">
+<ion-view title="<strong>TSNews Today</strong>">
     <ion-content>
         <ion-refresher
                 pulling-text="Pull to refresh..."
@@ -7,7 +7,8 @@
         <div class="list card">
 
             <div class="item item-avatar">
-                <h2 align="center" ><label align="center" ng-bind-html="storyTitle" style="text-align: center; font-weight: bolder"></label></h2>
+                <h2 align="center"><label align="center" ng-bind-html="storyTitle"
+                                          style="text-align: center; font-weight: bolder"></label></h2>
             </div>
 
             <div class="item item-body" align="center" style="text-align: center">
@@ -16,9 +17,7 @@
                 </div>-->
 
 
-
-
-                <div class="chpcs_image_carousel"  ng-if="MediaList.length > 0">
+                <div class="chpcs_image_carousel" ng-if="MediaList.length > 0">
                     <div align="center"
                          style="text-align: center; margin-top: 40px; border: solid 1px #000000">
                         <ion-slide-box show-pager="false">
@@ -28,7 +27,7 @@
                         <img ng-src="{{oImage.source}}"
                              style="max-width: 70%; max-height: 200px"/>
                         </span>
-</div>
+                                </div>
                             </ion-slide>
                         </ion-slide-box>
                     </div>

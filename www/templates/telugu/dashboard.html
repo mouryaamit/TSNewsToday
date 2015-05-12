@@ -1,4 +1,4 @@
-<ion-view title="TSNewsToday">
+<ion-view title="<strong>TSNews Today</strong>">
     <ion-content>
         <ion-refresher
                 pulling-text="Pull to refresh..."
@@ -24,7 +24,7 @@
         <div class="list card">
 
             <a href="#/telugu/category/{{d.name}}/{{d.slug}}" class="item item-icon-left" ng-repeat="d in categories">
-                <label ng-bind-html="d.name"  style="font-weight: bolder"></label>
+                <label ng-bind-html="d.name" style="font-weight: bolder"></label>
             </a>
             <a href="#/app/dashboard" class="item item-icon-left" ng-show="categories.length!=0">
                 English Version

@@ -1,4 +1,4 @@
-<ion-view title="TSNewsToday">
+<ion-view title="<strong>TSNews Today</strong>">
     <ion-content>
         <ion-refresher
                 pulling-text="Pull to refresh..."
@@ -16,29 +16,32 @@
                 </marquee>
             </div>
         </div>
-        <div class="chpcs_image_carousel"  ng-if="aImages.length > 0">
+        <div class="chpcs_image_carousel" ng-if="aImages.length > 0">
             <div align="center"
                  style="text-align: center; margin-top: 40px; border: solid 1px #000000">
                 <ion-slide-box show-pager="false">
                     <ion-slide ng-repeat="oImage in aImages">
                         <div class="chpcs_foo_content" style="height: 210px; margin-right: 6px;">
                     <span class="chpcs_img">
-                        <a href="#/app/story/{{oImage.ID}}" ><img ng-src="{{oImage.featured_image.attachment_meta.sizes.thumbnail.url}}"
-                             style="max-width: 70%"/></a>
+                        <a href="#/app/story/{{oImage.ID}}"><img
+                                ng-src="{{oImage.featured_image.attachment_meta.sizes.thumbnail.url}}"
+                                style="max-width: 70%"/></a>
                         </span>
                             <br>
                     <span class="chpcs_title">
                         <!--<a href="#/app/gallery/{{oImage.ID}}/{{oImage.title}}" >{{oImage.title}}</a>-->
-                        <a href="#/app/story/{{oImage.ID}}" >
+                        <a href="#/app/story/{{oImage.ID}}">
                             <label ng-bind-html="oImage.title"></label>
                         </a>
                         </span><br></div>
                     </ion-slide>
                 </ion-slide-box>
             </div>
-      <div class="chpcs_clearfix"></div>
-            <a class="chpcs_prev" id="wa_chpc_slider_prev" style="display: block;" data-ng-click="previousSlide()"><span>‹</span></a><a
-                class="chpcs_next" id="wa_chpc_slider_next" style="display: block;" data-ng-click="nextSlide()"><span>›</span></a>
+            <div class="chpcs_clearfix"></div>
+            <a class="chpcs_prev" id="wa_chpc_slider_prev" style="display: block;"
+               data-ng-click="previousSlide()"><span>‹</span></a><a
+                class="chpcs_next" id="wa_chpc_slider_next" style="display: block;"
+                data-ng-click="nextSlide()"><span>›</span></a>
         </div>
         <div class="list card">
 
