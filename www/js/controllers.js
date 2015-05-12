@@ -7,18 +7,6 @@ angular.module('starter.controllers', [])
     })
 
     .controller('DashboardCtrl', function ($scope, $stateParams, newsFactory, loadingService, $rootScope, $ionicSlideBoxDelegate) {
-        $scope.aImages = null || [];
-        newsFactory.GetPosts({
-            'filter[category_name]': 'photo-gallery'
-        }).$promise.then(function (data) {
-                $scope.aImages = data;
-                $scope.$broadcast('scroll.refreshComplete');
-                $ionicSlideBoxDelegate.slide(0);
-                loadingService.hide();
-            }, function (error) {
-                $scope.$broadcast('scroll.refreshComplete');
-                loadingService.hide();
-            })
         $scope.nextSlide = function() {
             $ionicSlideBoxDelegate.next();
         }
@@ -29,6 +17,7 @@ angular.module('starter.controllers', [])
         $scope.doRefresh = function () {
             loadingService.show();
             $rootScope.categories = null || []
+            $scope.aImages = null || [];
             newsFactory.GetAllCategory().$promise.then(function (data) {
                 $rootScope.categories = null || [];
                 for (var i = 0; i < data.length; i++) {
@@ -51,6 +40,18 @@ angular.module('starter.controllers', [])
                 $scope.$broadcast('scroll.refreshComplete');
                 loadingService.hide();
             })
+
+            newsFactory.GetPosts({
+                'filter[category_name]': 'photo-gallery'
+            }).$promise.then(function (data) {
+                    $scope.aImages = data;
+                    $scope.$broadcast('scroll.refreshComplete');
+                    $ionicSlideBoxDelegate.slide(0);
+                    loadingService.hide();
+                }, function (error) {
+                    $scope.$broadcast('scroll.refreshComplete');
+                    loadingService.hide();
+                })
         }
         $scope.doRefresh();
     })
