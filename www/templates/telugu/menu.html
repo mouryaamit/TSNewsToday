@@ -21,7 +21,7 @@
                 <ion-item nav-clear menu-close href="#/telugu/dashboard">
                     హోమ్
                 </ion-item>
-                <ion-item nav-clear menu-close href="#/telugu/category/{{d.name}}" ng-repeat="d in telCategories">
+                <ion-item nav-clear menu-close href="#/telugu/category/{{d.name}}/{{d.slug}}" ng-repeat="d in telCategories">
                     <label ng-bind-html="d.name"></label>
                 </ion-item>
                 <ion-item nav-clear menu-close href="#/app/dashboard" style="color: #ef473a" >
